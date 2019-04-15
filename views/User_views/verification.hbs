@@ -1,0 +1,26 @@
+<body>
+<link rel='stylesheet' href='/stylesheets/verification_css.css' />
+<div class="body"></div>
+<div class="grad"></div>
+<div class="header">
+    <div><span>Verification</span></div>
+
+</div>
+
+<br>
+
+<div class="login">
+
+    <form action="/verification" method="post">
+        <input type="text" placeholder="username" id="username" name="username"><br>
+        <input type="password" placeholder="Verification Key" id="verificationkey" name="verificationkey"><br>
+        <input type="submit" value="Verify Account">
+
+        <div><h3>{{message}}</h3></div>
+
+    </form>
+</div>
+<script src='/javascripts/jquery.min.js'></script>
+<script src="/javascripts/prefixfree.min.js"></script>
+
+</body>

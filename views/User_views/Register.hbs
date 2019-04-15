@@ -1,0 +1,43 @@
+<body>
+<link rel='stylesheet' href='/stylesheets/Register.css' />
+<div class="body"></div>
+<div class="grad"></div>
+
+<div class="header">
+    <div><span>Registration</span></div>
+
+
+</div>
+
+<br>
+<div class="login">
+
+    <form action="/signup" method="post">
+        <input type="text" placeholder="username" id="username" name="username"><br>
+        <input type="email" placeholder="email" id="email" name="email"><br>
+        <input type="text" placeholder="first name" id="firstname" name="firstname"><br>
+
+        <input type="text" placeholder="last name" id="lastname" name="lastname"><br>
+        <input type="password" placeholder="password" id="password" name="password"><br>
+        <input type="password" placeholder="Repeat Password" id="password_r" name="password_r"><br>
+        <input type="submit" value="Register">
+        <div style="clear: left" class="bottom">
+
+            {{#if hasErrors}}
+                <div class="alert alert-danger">
+                    {{# each messages}}
+                        <h3>{{this}}</h3>
+                    {{/each}}
+                </div>
+            {{/if}}
+
+        </div>
+    </form>
+</div>
+<script src='/javascripts/jquery.min.js'></script>
+<script src="/javascripts/prefixfree.min.js"></script>
+
+
+
+
+</body>

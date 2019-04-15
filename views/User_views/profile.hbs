@@ -1,0 +1,56 @@
+<link rel='stylesheet' href='/stylesheets/user_profile.css' />
+<link href="/stylesheets/bootstrap.css" rel="stylesheet">
+<link href="/stylesheets/site.css" rel="stylesheet">
+<link href="/stylesheets/bootstrap-responsive.css" rel="stylesheet">
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<div class="container">
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="#">User Profile</a>
+               <!-- <div class="btn-group pull-right">
+
+                    <a class="btn" href="/Management/my-profile"><i class="icon-user"></i>{{in.username}}</a>
+
+                    <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/Management/my-profile">Profile</a></li>
+                        <li class="divider"></li>
+                        <li><a href="/">Logout</a></li>
+                    </ul>
+                </div>-->
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li><a href="/user">Home</a></li>
+                        <li><a href="/logout">Logout</a></li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+</div>
+    <div class="avatar-flip">
+        <img src="http://www.hit4hit.org/img/login/user-icon-6.png" height="150" width="150">
+        <img src="http://images.clipartpanda.com/user-clipart-dagobert83_female_user_icon.png" height="150" width="150">
+    </div>
+    <h1>{{in.firstName}}  {{in.lastName}}</h1>
+    <h3>My Email Is: {{in.email}} </h3>
+    <h3>Description:  {{in.Description}}</h3>
+    <form action="/edit/{{in.id}}" method="get">
+
+        <input type="submit" class="btn btn-success btn-small" value="Edit your profile">
+    </form>
+
+</div>

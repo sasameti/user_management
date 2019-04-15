@@ -1,0 +1,26 @@
+<body>
+<link rel='stylesheet' href='/stylesheets/login_css.css' />
+<div class="body"></div>
+<div class="grad"></div>
+<div class="header">
+    <div>User<span>Login</span></div>
+</div>
+<br>
+<div class="login">
+    {{#if hasErrors}}
+        <div class="alert alert-danger">
+            {{# each messages}}
+                <h3>{{this}}</h3>
+            {{/each}}
+        </div>
+    {{/if}}
+    <form action="/login" method="post">
+        <input type="text" placeholder="email" id="email" name="email"><br>
+        <input type="password" placeholder="password" id="password" name="password"><br>
+        <input type="submit" value="Login">
+    </form>
+</div>
+<script src='/javascripts/jquery.min.js'></script>
+<script src="/javascripts/prefixfree.min.js"></script>
+
+</body>

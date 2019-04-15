@@ -1,0 +1,65 @@
+<link rel='stylesheet' href='/stylesheets/user_profile.css' />
+<link href="/stylesheets/bootstrap.css" rel="stylesheet">
+<link href="/stylesheets/site.css" rel="stylesheet">
+<link href="/stylesheets/bootstrap-responsive.css" rel="stylesheet">
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<div class="container">
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="#">User Profile</a>
+                <!-- <div class="btn-group pull-right">
+
+                    <a class="btn" href="/Management/my-profile"><i class="icon-user"></i>{{in.username}}</a>
+
+                    <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/Management/my-profile">Profile</a></li>
+                        <li class="divider"></li>
+                        <li><a href="/">Logout</a></li>
+                    </ul>
+                </div>-->
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li><a href="/user">Home</a></li>
+                        <li><a href="/">Logout</a></li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="avatar-flip">
+        <img src="../../public/images/wom.png" height="150" width="150">
+        <img src="../../public/images/man.png" height="150" width="150">
+    </div>
+    <h2>{{in.firstName}},{{in.lastName}}</h2>
+    <div class="login">
+
+    <form action="/user/submitchanges/{{in.id}}" method="post">
+
+
+
+        <input type="text" placeholder="First Name: {{in.firstName}}" id="firstname" name="firstname"><br>
+
+        <input type="text" placeholder="Last Name: {{in.lastName}}" id="lastname" name="lastname"><br>
+
+        <input type="text" placeholder="Description: {{in.Description}}" id="description" name="description"><br>
+
+        <input type="submit" class="btn btn-success btn-small" value="Submit Changes">
+    </form>
+    </div>
+
+</div>
